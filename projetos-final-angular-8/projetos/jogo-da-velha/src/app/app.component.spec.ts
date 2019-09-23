@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { JogoDaVelhaModule } from './jogo-da-velha';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -8,8 +8,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
+      imports: [
+        JogoDaVelhaModule
       ]
     }).compileComponents();
   }));
@@ -19,4 +19,5 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
+
 });
